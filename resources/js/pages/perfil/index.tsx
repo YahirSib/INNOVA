@@ -14,7 +14,7 @@ export default function Perfil() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Perfil" />
-            
+
         </AppLayout>
     );
 }

@@ -4,20 +4,63 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { NavPrincipal, type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Settings2Icon, UserIcon } from 'lucide-react';
+import { BookOpen, BoxesIcon, File, FileChartColumnIncreasingIcon, Folder, FolderIcon, Home, LayersIcon, LayoutGrid, ListIcon, Settings2Icon, SettingsIcon, SofaIcon, TagsIcon, UserIcon, UsersIcon, UserSquare2Icon } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mantenimientosItem: NavItem[] = [
-    {
-        title: 'Dashboard',
-        href: '/dashboard',
-        icon: LayoutGrid,
-    },
     {
         title: 'Usuarios',
         href: '/users',
         icon: UserIcon
     },
+    {
+        title: 'Perfil',
+        href: '/perfil',
+        icon: ListIcon
+    },
+    {
+        title: 'Piezas',
+        href: '/piezas',
+        icon: LayersIcon
+    },
+    {
+        title: 'Salas',
+        href: '/salas',
+        icon: SofaIcon
+    },
+    {
+        title: 'Carpinteros',
+        href: '/carpinteros',
+        icon: UsersIcon
+    },
+    {
+        title: 'Tapiceros',
+        href: '/tapiceros',
+        icon: UserSquare2Icon
+    }
+];
+
+const movimientosItem : NavItem[] = [
+    {
+        title: 'Nota de Pieza',
+        href: '/nota-pieza',
+        icon: File
+    },
+    {
+        title: 'Agrupacion de Sala',
+        href: '/agrupacion-sala',
+        icon: BoxesIcon
+    },
+    {
+        title: 'Traspaso de Sala',
+        href: '/traspaso-sala',
+        icon: TagsIcon
+    },
+    {
+        title: 'Nota de Produccion',
+        href: '/nota-produccion',
+        icon: FolderIcon
+    }
 ];
 
 const menuPrin: NavPrincipal[] = [
@@ -26,19 +69,19 @@ const menuPrin: NavPrincipal[] = [
         icon: Settings2Icon,
         items: mantenimientosItem,
     },
+    {
+        title: 'Movimientos',
+        icon: FileChartColumnIncreasingIcon,
+        items: movimientosItem,
+    }
 ];
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits',
-        icon: BookOpen,
-    },
+        title: 'Dashboard',
+        href: '/dashboard',
+        icon: Home,
+    }
 ];
 
 export function AppSidebar() {
