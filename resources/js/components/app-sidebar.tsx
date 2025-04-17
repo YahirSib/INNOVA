@@ -2,12 +2,12 @@ import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import { type NavItem } from '@/types';
+import { NavPrincipal, type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, UserIcon } from 'lucide-react';
+import { BookOpen, Folder, LayoutGrid, Settings2Icon, UserIcon } from 'lucide-react';
 import AppLogo from './app-logo';
 
-const mainNavItems: NavItem[] = [
+const mantenimientosItem: NavItem[] = [
     {
         title: 'Dashboard',
         href: '/dashboard',
@@ -17,6 +17,14 @@ const mainNavItems: NavItem[] = [
         title: 'Usuarios',
         href: '/users',
         icon: UserIcon
+    },
+];
+
+const menuPrin: NavPrincipal[] = [
+    {
+        title: 'Mantenimientos',
+        icon: Settings2Icon,
+        items: mantenimientosItem,
     },
 ];
 
@@ -49,7 +57,7 @@ export function AppSidebar() {
             </SidebarHeader>
 
             <SidebarContent>
-                <NavMain items={mainNavItems} />
+                <NavMain items={menuPrin} />
             </SidebarContent>
 
             <SidebarFooter>

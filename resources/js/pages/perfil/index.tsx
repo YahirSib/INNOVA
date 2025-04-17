@@ -5,15 +5,15 @@ import { Head } from '@inertiajs/react';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Usuarios',
-        href: '/users',
+        title: 'Perfil',
+        href: '/perfil',
     },
 ];
 
-export default function Usuarios() {
+export default function Perfil() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Usuarios" />
+            <Head title="Perfil" />
             
         </AppLayout>
     );
