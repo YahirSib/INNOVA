@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Perfil;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -22,9 +23,9 @@ class PerfilController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -32,7 +33,15 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['nombre' => 'required', 'estado' => 'required']);
+
+        Perfil::create([
+            'nombre' => $request->nombre,
+            'estado' => $request->estado
+        ]);
+
+        return redirect()->route('perfil.index');
+
     }
 
     /**

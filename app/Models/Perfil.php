@@ -11,4 +11,6 @@ class Perfil extends Model
         'estado'
     ];
 
+    protected $table = "perfil";
+
 }
